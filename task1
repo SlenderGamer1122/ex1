@@ -1,0 +1,28 @@
+ALGORITHM task1
+VAR
+   sum : INTEGER;
+BEGIN
+    sum := 0;
+
+    for i in range (0, set1.length-1) DO:
+        nb := 0;
+
+        for j in range (0, set2.length-1) DO:
+            if set1[i] = set2[j] then:
+                nb := nb + 1;
+
+        if nb = 0 then:
+            sum := sum + set1[i];
+
+    for i in range (0, set2.length-1) DO:
+        n := 0;
+
+        for j in range (0, set1.length-1) DO:
+            if set2[i] = set1[j] then:
+                n := n + 1;
+
+        if n = 0 then:
+            sum := sum + set2[i];
+
+    Write('The value of summing distinct numbers is ', sum);
+END
